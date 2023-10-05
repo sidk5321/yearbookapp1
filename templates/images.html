@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Yearbook</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="image-book">
+        <h1>Memories</h1>
+        <a href="http://127.0.0.1:5000">
+            <button class="back-button">Go Back</button>
+        </a>
+    </div>
+
+    <div class="images-section">
+        <h2>Events</h2>
+        <div class="image-pair">
+            <div class="image">
+                <img src="{{ images_data['img'][0] }}" class="image">
+            </div>
+            <div class="image">
+                <img src="{{ images_data['img'][1] }}" class="image">
+            </div>
+        </div>
+    </div>
+
+    <div class="images-section">
+        <h2>Meetings</h2>
+        <div class="image-pair">
+            <div class="image">
+                <img src="{{ images_data['img'][3] }}" class="image">
+            </div>
+            <div class="image">
+                <img src="{{ images_data['img'][4] }}" class="image">
+            </div>
+        </div>
+    </div>
+
+    <div class="images-section">
+        <h2>Team Outings</h2>
+        <div class="image-pair">
+            <div class="image">
+                <img src="{{ images_data['img'][5] }}" class="image">
+            </div>
+            <div class="image">
+                <img src="{{ images_data['img'][6] }}" class="image">
+            </div>
+        </div>
+    </div>
+
+    
+
+</body>
+
+</html>

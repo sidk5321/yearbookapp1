@@ -1,0 +1,12 @@
+.image {
+    width: auto; /* Set your desired width */
+    height: auto; /* Set your desired height */
+    margin-bottom: 20px;
+    overflow: hidden; /* Ensure that the image doesn't overflow its container */
+}
+
+.image img {
+    width: 100%; /* Make sure the image takes 100% width of its container */
+    height: 100%; /* Make sure the image takes 100% height of its container */
+    object-fit: cover; /* Maintain aspect ratio and cover the entire container */
+}

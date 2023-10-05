@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='login_style.css') }}">
+    <title>Login</title>
+</head>
+<body>
+    <!-- Header image at the top of the body -->
+    <img src="https://media.glassdoor.com/banner/bh/7900/ukg-banner-1602874770858.jpg" alt="Header Image" class="header-image">
+
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>

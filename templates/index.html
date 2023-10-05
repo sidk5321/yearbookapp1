@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Yearbook</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+        <button class="toggle-button" onclick="toggleSidebar()">...</button>
+        <script src="/static/script.js"></script>
+        <a href="#header-image">Home</a>
+        <a href="#wishes-section">Yearbook</a>
+        <a href="http://127.0.0.1:5000/images">Images</a>       
+    </div>
+
+    <img src="https://media.glassdoor.com/banner/bh/7900/ukg-banner-1602874770858.jpg" alt="Header Image" class="header-image">
+
+    <div class="yearbook">
+        <h1>Yearbook 2023</h1>
+        <h2>Hello, {{username}}!</h2>
+        
+        <div class="wishes-container">
+            <div class="wishes" id="wishes-section">
+                <h2>Wishes</h2>
+                {% for entry in wishes_data %}
+                <div class="wish">
+                    <p>{{ entry['Wish'] }}</p>
+                    <p class="signature">- {{ entry['Sender'] }}</p>
+                    <p class="date">- {{ entry['Date'] }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            
+            <div class="appreciations" id="appreciations-section">
+                <h2>Appreciations</h2>
+                {% for entry in appreciations_data %}
+                <div class="appreciation">
+                    <p>{{ entry['Reason'] }}</p>
+                    <p class="signature">- {{ entry['Sender'] }}</p>
+                    <p class="date">- {{ entry['Date'] }}</p>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="anniversarys" id="anniversary-section">
+                <h2>Anniversary Wishes</h2>
+                {% for entry in anniversary_data %}
+                <div class="anniversary">
+                    <p>{{ entry['Anniversary_Wish'] }}</p>
+                    <p class="signature">- {{ entry['Sender'] }}</p>
+                    <p class="date">- {{ entry['Date'] }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
